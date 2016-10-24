@@ -1,0 +1,14 @@
+import urllib
+import json
+import string
+import sys
+
+
+token = 38e60ff4b8b3b6ea017939c4057e0eb4
+githubURL= "https://github.com/aubreygavin/GavinCode2040"
+data = urllib.urlencode({"token": token, "github": githubURL})
+
+url = "http://challenge.code2040.org/api/register"
+
+conn = urllib.urlopen(url, data)
+print conn.read()
